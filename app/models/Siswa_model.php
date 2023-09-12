@@ -26,13 +26,15 @@ class Siswa_model {
     {
         $query = "INSERT INTO siswa
                     VALUES
-                  ('', :nama, :nis, :email, :jurusan)";
+                  ('', :nama, :nis, :email, :jurusan, :alamat, :no_tlp)";
 
         $this->db->query($query);
         $this->db->bind('nama', $data['nama']);
         $this->db->bind('nis', $data['nis']);
         $this->db->bind('email', $data['email']);
         $this->db->bind('jurusan', $data['jurusan']);
+        $this->db->bind('alamat', $data['alamat']);
+        $this->db->bind('no_tlp', $data['no_tlp']);
 
         $this->db->execute();
 
@@ -57,7 +59,9 @@ class Siswa_model {
                     nama = :nama,
                     nis = :nis,
                     email = :email,
-                    jurusan = :jurusan
+                    jurusan = :jurusan,
+                    alamat = :alamat,
+                    no_tlp = :no_tlp
                   WHERE id = :id";
 
         $this->db->query($query);
@@ -65,6 +69,8 @@ class Siswa_model {
         $this->db->bind('nis', $data['nis']);
         $this->db->bind('email', $data['email']);
         $this->db->bind('jurusan', $data['jurusan']);
+        $this->db->bind('alamat', $data['alamat']);
+        $this->db->bind('no_tlp', $data['no_tlp']);
         $this->db->bind('id', $data['id']);
 
         $this->db->execute();
@@ -77,10 +83,10 @@ class Siswa_model {
     public function cariDataSiswa()
     {
         $keyword = $_POST['keyword'];
-        $query = "SELECT * FROM siswa WHERE nama LIKE :keyword";
+        $query = "SELECT * FROM siswa WHERE nama LIKE :keyword OR jurusan LIKE :keyword";
         $this->db->query($query);
         $this->db->bind('keyword', "%$keyword%");
         return $this->db->resultSet();
     }
-
+    
 }

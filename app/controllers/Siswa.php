@@ -71,6 +71,7 @@ class Siswa extends Controller {
         $this->view('siswa/index', $data);
         $this->view('templates/footer');
     }
+
     
 
 }

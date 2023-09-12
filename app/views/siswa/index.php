@@ -81,11 +81,21 @@
             <option value="TKJ">TKJ</option>
             <option value="DKV">DKV</option>
             <option value="Animasi">Animasi</option>
-        
+            </select>
+              </div>
 
-          </select>
+         <div class="form-group">
+            <label for="alamat">Alamat</label>
+            <input type="text" class="form-control" id="alamat" name="alamat">
         </div>
 
+         <div class="form-group">
+            <label for="no_tlp">No.Telp</label>
+            <input type="number" class="form-control" id="no_tlp" name="no_tlp">
+        </div>
+        
+
+          
       </div>
       <div class="modal-footer">
         <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>

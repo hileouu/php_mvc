@@ -19,6 +19,8 @@
         <a class="nav-link active" aria-current="page" href="<?= BASEURL; ?>">Home</a>
         <a class="nav-link" href="<?= BASEURL; ?>/siswa">Siswa</a>
         <a class="nav-link" href="<?= BASEURL; ?>/about">About</a>
+        <a class="nav-link" href="<?= BASEURL; ?>/mata_pelajaran">Mata Pelajaran</a>
+        <a class="nav-link" href="<?= BASEURL; ?>/pilih_mapel">Pilih Mata Pelajaran</a>
       </div>
     </div>
   </div>
